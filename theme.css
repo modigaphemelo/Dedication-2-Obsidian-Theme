@@ -1,5 +1,76 @@
-/* ==== Colors ====*/
-.theme-dark{
+/* @settings
+
+name: Dedication 2 Theme Settings
+id: dedication-2-theme
+settings:
+    -
+        id: color-presets
+        title: Color Presets
+        type: heading
+        level: 1
+        collapsed: false
+    -
+        id: color-preset
+        title: Color Scheme
+        type: class-select
+        default: color-preset-original-dark
+        options:
+            -
+                label: Original Dark (Default)
+                value: color-preset-original-dark
+            -
+                label: Matrix Green
+                value: color-preset-matrix-green
+            -
+                label: Blade Runner
+                value: color-preset-blade-runner
+            -
+                label: Dark Knight
+                value: color-preset-dark-knight
+            -
+                label: Gotham Noir
+                value: color-preset-gotham-noir
+            -
+                label: Cosmic Blue
+                value: color-preset-cosmic-blue
+            -
+                label: Star Trek
+                value: color-preset-star-trek
+
+    -
+        id: typography-settings
+        title: Typography
+        type: heading
+        level: 1
+        collapsed: true
+    -
+        id: font-family
+        title: Font Family
+        type: class-select
+        default: font-family-inter
+        options:
+            -
+                label: Inter (Default)
+                value: font-family-inter
+            -
+                label: System Fonts
+                value: font-family-system
+            -
+                label: Georgia Serif
+                value: font-family-georgia
+            -
+                label: Helvetica Neue
+                value: font-family-helvetica
+            -
+                label: Source Sans Pro
+                value: font-family-source-sans
+            -
+                label: Roboto Mono
+                value: font-family-roboto-mono
+*/
+
+/* ==== Original Dark Theme (Default) ==== */
+.color-preset-original-dark, .theme-dark {
     --background-primary:         #0d1117;
     --background-primary-alt:     #242424;
     --background-secondary:       #161b22;
@@ -20,8 +91,6 @@
     --text-link:                  #83a598; 
     --text-a-hover:               #83a598; 
     --text-accent-hover:          #D49335;
-
-    /* ^^^ added for hover over bracket internal links */
     --inline-code:                #8b5cf6;
     --code-block:                 #83a598; 
     --text-a:                     #f8c537; 
@@ -30,7 +99,6 @@
     --text-on-accent:             #fff;
     --interactive-accent-rgb:     #f8c537; 
     --vim-cursor:                 #f8c537;
-
     --pre-code:                   #1e1e1e; 
     --interactive-before:         #7c6f64;
     --background-modifier-border: #00ffff;
@@ -81,19 +149,311 @@ background-color: #483699;
 .theme-light .cm-s-obsidian span.obsidian-search-match-highlight {
 background-color: #808080;
 }
-/*=========================================================================================*/
 
-/* Font Styling */
+/* ==== Premium Dark Themes ==== */
 
-:root {
-   --default-font: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
-   --mono-font: "SF Mono", "Cascadia Code", "JetBrains Mono", "Fira Code", monospace;
+/* Matrix Green */
+.color-preset-matrix-green, .theme-dark.color-preset-matrix-green {
+    --background-primary: #000f00;
+    --background-primary-alt: #001a00;
+    --background-secondary: #001400;
+    --background-secondary-alt: #002200;
+    --text-normal: #00ff41;
+    --text-faint: #008022;
+    --code-background: #002a00;
+
+    --text-title-h1: #00ff41;
+    --text-title-h2: #00cc33;
+    --text-title-h3: #00ff88;
+    --text-title-h4: #ffff00;
+    --text-title-h5: #ff4444;
+    --text-title-h6: #00aaff;
+
+    --text-link: #00ff41;
+    --text-a: #ffff00;
+    --interactive-accent: #00ff41;
+    --text-accent: #00cc33;
+    --background-modifier-border: #00ff41;
 }
+
+.theme-light.color-preset-matrix-green {
+    --background-primary: #f0fff0;
+    --background-primary-alt: #e0ffe0;
+    --background-secondary: #d0ffd0;
+    --background-secondary-alt: #c0ffc0;
+    --text-normal: #006400;
+    --text-faint: #008022;
+    --code-background: #e0ffe0;
+
+    --text-title-h1: #008000;
+    --text-title-h2: #006400;
+    --text-title-h3: #004d00;
+    --text-title-h4: #ff6b00;
+    --text-title-h5: #cc0000;
+    --text-title-h6: #0066cc;
+
+    --text-link: #008000;
+    --text-a: #ff6b00;
+    --interactive-accent: #008000;
+    --text-accent: #006400;
+    --background-modifier-border: #008000;
+}
+
+/* Blade Runner */
+.color-preset-blade-runner, .theme-dark.color-preset-blade-runner {
+    --background-primary: #1a1a2e;
+    --background-primary-alt: #2d2d44;
+    --background-secondary: #22223a;
+    --background-secondary-alt: #333355;
+    --text-normal: #e6e6ff;
+    --text-faint: #9999cc;
+    --code-background: #2a2a4a;
+
+    --text-title-h1: #ff5555;
+    --text-title-h2: #55aaff;
+    --text-title-h3: #ffaa55;
+    --text-title-h4: #aaffaa;
+    --text-title-h5: #ff55ff;
+    --text-title-h6: #55ffff;
+
+    --text-link: #55aaff;
+    --text-a: #ffaa55;
+    --interactive-accent: #ff5555;
+    --text-accent: #55ffff;
+    --background-modifier-border: #ff5555;
+}
+
+.theme-light.color-preset-blade-runner {
+    --background-primary: #f0f0ff;
+    --background-primary-alt: #e0e0ff;
+    --background-secondary: #d0d0ff;
+    --background-secondary-alt: #c0c0ff;
+    --text-normal: #333366;
+    --text-faint: #666699;
+    --code-background: #e8e8ff;
+
+    --text-title-h1: #cc3333;
+    --text-title-h2: #3366cc;
+    --text-title-h3: #cc6600;
+    --text-title-h4: #339933;
+    --text-title-h5: #993399;
+    --text-title-h6: #33cccc;
+
+    --text-link: #3366cc;
+    --text-a: #cc6600;
+    --interactive-accent: #cc3333;
+    --text-accent: #33cccc;
+    --background-modifier-border: #cc3333;
+}
+
+/* Dark Knight */
+.color-preset-dark-knight, .theme-dark.color-preset-dark-knight {
+    --background-primary: #0a0a0a;
+    --background-primary-alt: #1a1a1a;
+    --background-secondary: #121212;
+    --background-secondary-alt: #222222;
+    --text-normal: #d4d4d4;
+    --text-faint: #666666;
+    --code-background: #2a2a2a;
+
+    --text-title-h1: #b8860b;
+    --text-title-h2: #8b0000;
+    --text-title-h3: #2f4f4f;
+    --text-title-h4: #1e90ff;
+    --text-title-h5: #daa520;
+    --text-title-h6: #696969;
+
+    --text-link: #1e90ff;
+    --text-a: #b8860b;
+    --interactive-accent: #8b0000;
+    --text-accent: #b8860b;
+    --background-modifier-border: #8b0000;
+}
+
+.theme-light.color-preset-dark-knight {
+    --background-primary: #f5f5f5;
+    --background-primary-alt: #e8e8e8;
+    --background-secondary: #dcdcdc;
+    --background-secondary-alt: #d0d0d0;
+    --text-normal: #2f2f2f;
+    --text-faint: #666666;
+    --code-background: #e8e8e8;
+
+    --text-title-h1: #8b6508;
+    --text-title-h2: #a52a2a;
+    --text-title-h3: #2f4f4f;
+    --text-title-h4: #1e6fa8;
+    --text-title-h5: #b8860b;
+    --text-title-h6: #696969;
+
+    --text-link: #1e6fa8;
+    --text-a: #8b6508;
+    --interactive-accent: #a52a2a;
+    --text-accent: #8b6508;
+    --background-modifier-border: #a52a2a;
+}
+
+/* Gotham Noir */
+.color-preset-gotham-noir, .theme-dark.color-preset-gotham-noir {
+    --background-primary: #0d0d0d;
+    --background-primary-alt: #1c1c1c;
+    --background-secondary: #141414;
+    --background-secondary-alt: #242424;
+    --text-normal: #d4af37;
+    --text-faint: #8b7500;
+    --code-background: #2a2a2a;
+
+    --text-title-h1: #d4af37;
+    --text-title-h2: #c0c0c0;
+    --text-title-h3: #a0522d;
+    --text-title-h4: #8b0000;
+    --text-title-h5: #2f4f4f;
+    --text-title-h6: #696969;
+
+    --text-link: #c0c0c0;
+    --text-a: #d4af37;
+    --interactive-accent: #8b0000;
+    --text-accent: #d4af37;
+    --background-modifier-border: #d4af37;
+}
+
+.theme-light.color-preset-gotham-noir {
+    --background-primary: #f8f8f8;
+    --background-primary-alt: #e8e8e8;
+    --background-secondary: #d8d8d8;
+    --background-secondary-alt: #c8c8c8;
+    --text-normal: #2a2a2a;
+    --text-faint: #666666;
+    --code-background: #e8e8e8;
+
+    --text-title-h1: #8b7500;
+    --text-title-h2: #555555;
+    --text-title-h3: #8b4513;
+    --text-title-h4: #a52a2a;
+    --text-title-h5: #2f4f4f;
+    --text-title-h6: #696969;
+
+    --text-link: #555555;
+    --text-a: #8b7500;
+    --interactive-accent: #a52a2a;
+    --text-accent: #8b7500;
+    --background-modifier-border: #8b7500;
+}
+
+/* Cosmic Blue */
+.color-preset-cosmic-blue, .theme-dark.color-preset-cosmic-blue {
+    --background-primary: #000033;
+    --background-primary-alt: #001a4d;
+    --background-secondary: #001133;
+    --background-secondary-alt: #002266;
+    --text-normal: #b3e0ff;
+    --text-faint: #6699cc;
+    --code-background: #002b80;
+
+    --text-title-h1: #00ccff;
+    --text-title-h2: #0099ff;
+    --text-title-h3: #0066ff;
+    --text-title-h4: #ffcc00;
+    --text-title-h5: #ff6666;
+    --text-title-h6: #cc00ff;
+
+    --text-link: #0099ff;
+    --text-a: #ffcc00;
+    --interactive-accent: #00ccff;
+    --text-accent: #0099ff;
+    --background-modifier-border: #00ccff;
+}
+
+.theme-light.color-preset-cosmic-blue {
+    --background-primary: #f0f8ff;
+    --background-primary-alt: #e0f0ff;
+    --background-secondary: #d0e8ff;
+    --background-secondary-alt: #c0e0ff;
+    --text-normal: #003366;
+    --text-faint: #336699;
+    --code-background: #e8f4ff;
+
+    --text-title-h1: #0066cc;
+    --text-title-h2: #004499;
+    --text-title-h3: #002266;
+    --text-title-h4: #cc9900;
+    --text-title-h5: #cc3333;
+    --text-title-h6: #9900cc;
+
+    --text-link: #004499;
+    --text-a: #cc9900;
+    --interactive-accent: #0066cc;
+    --text-accent: #004499;
+    --background-modifier-border: #0066cc;
+}
+
+/* Star Trek */
+.color-preset-star-trek, .theme-dark.color-preset-star-trek {
+    --background-primary: #000033;
+    --background-primary-alt: #001144;
+    --background-secondary: #000a2a;
+    --background-secondary-alt: #001c55;
+    --text-normal: #e6f2ff;
+    --text-faint: #88aadd;
+    --code-background: #002266;
+
+    --text-title-h1: #ffcc00;
+    --text-title-h2: #66ccff;
+    --text-title-h3: #ff6666;
+    --text-title-h4: #66ff99;
+    --text-title-h5: #cc66ff;
+    --text-title-h6: #ff9966;
+
+    --text-link: #66ccff;
+    --text-a: #ffcc00;
+    --interactive-accent: #ff6666;
+    --text-accent: #66ccff;
+    --background-modifier-border: #ffcc00;
+}
+
+.theme-light.color-preset-star-trek {
+    --background-primary: #f5faff;
+    --background-primary-alt: #e6f2ff;
+    --background-secondary: #d6eaff;
+    --background-secondary-alt: #c6e2ff;
+    --text-normal: #003366;
+    --text-faint: #336699;
+    --code-background: #e8f4ff;
+
+    --text-title-h1: #cc9900;
+    --text-title-h2: #3399cc;
+    --text-title-h3: #cc3333;
+    --text-title-h4: #33cc66;
+    --text-title-h5: #9933cc;
+    --text-title-h6: #cc6633;
+
+    --text-link: #3399cc;
+    --text-a: #cc9900;
+    --interactive-accent: #cc3333;
+    --text-accent: #3399cc;
+    --background-modifier-border: #cc9900;
+}
+
+/* ==== Typography Presets ==== */
+.font-family-inter { --default-font: "Inter", -apple-system, BlinkMacSystemFont, sans-serif; }
+.font-family-system { --default-font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
+.font-family-georgia { --default-font: Georgia, "Times New Roman", Times, serif; }
+.font-family-helvetica { --default-font: "Helvetica Neue", Helvetica, Arial, sans-serif; }
+.font-family-source-sans { --default-font: "Source Sans Pro", -apple-system, BlinkMacSystemFont, sans-serif; }
+.font-family-roboto-mono { --default-font: "Roboto Mono", "SF Mono", "Cascadia Code", monospace; }
 
 /* Apply fonts */
 body, .cm-scroller, .markdown-preview-view {
-    font-family: var(--default-font);
+    font-family: var(--default-font, "Inter", -apple-system, BlinkMacSystemFont, sans-serif);
     font-feature-settings: "kern" 1, "liga" 1; 
+}
+
+/*=========================================================================================*/
+/* REST OF YOUR ORIGINAL THEME.CSS CONTENT GOES HERE */
+/* Font Styling */
+:root {
+   --default-font: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+   --mono-font: "SF Mono", "Cascadia Code", "JetBrains Mono", "Fira Code", monospace;
 }
 
 /*==== Checkbox ====*/
@@ -309,13 +669,13 @@ ul > li.task-list-item {
 
 /* Hide collapse icon stroke for tags, bookmarks, and file explorer when not hovered */
 body:not(.file-icon-remove) .workspace-leaf-content[data-type="tag"] .tree-item:not(:hover) .tree-item-icon.collapse-icon svg.svg-icon,
-body:not(.file-icon-remove) .workspace-leaf-content:is([data-type="bookmarks"], [data-type="file-explorer"]) .tree-item-icon.collapse-icon svg.svg-icon {
+body:not(.file-icon-remove) .workspace-leaf-content:is([data-type="bookmarks"], [data-type="file-explorer"]) .tree-item:not(:hover) .tree-item-icon.collapse-icon svg.svg-icon {
     color: transparent;
 }
 
 /* Apply background color to collapse icons */
 body:not(.file-icon-remove) .workspace-leaf-content[data-type="tag"] .tree-item:not(:hover) .tree-item-icon.collapse-icon,
-body:not(.file-icon-remove) .workspace-leaf-content:is([data-type="bookmarks"], [data-type="file-explorer"]) .tree-item-icon.collapse-icon {
+body:not(.file-icon-remove) .workspace-leaf-content:is([data-type="bookmarks"], [data-type="file-explorer"]) .tree-item:not(:hover) .tree-item-icon.collapse-icon {
     background-color: var(--folder-color, currentColor);
     opacity: var(--icon-opacity);
 }
@@ -589,6 +949,8 @@ button.mod-cta:focus {
   border-left: 3px solid var(--interactive-accent);
 }
 
+/*=========================================================================================*/
+
 /* ====== status bar====== */
 
 body {
@@ -611,7 +973,9 @@ body {
     height: 24px;
 }
 
-/*==== Table Styles ====*/
+/*=========================================================================================*/
+
+/* Table styles */
 
 /* Center table headers */
 .markdown-rendered th {
@@ -647,7 +1011,9 @@ body:not(.table-width-obsidian-default) :is(.markdown-rendered, .markdown-source
     height: calc(var(--divider-vertical-height) - var(--header-height) - 2px);
 }
 
-/* ==== Divider ==== */
+/*=========================================================================================*/
+
+/* divider */
 body {
     --workspace-divider-color: var(--text-accent);
 }
@@ -659,7 +1025,9 @@ body {
     height: calc(var(--divider-vertical-height) - var(--header-height) - 2px);
 }
 
-/* ==== Pendulum Startup Animation ==== */
+/*=========================================================================================*/
+
+/* Pendulum Startup Animation */
 body > .progress-bar-container .progress-bar-indicator {
     height: 80px;
     width: 20px;
@@ -690,7 +1058,9 @@ body > .progress-bar-container .progress-bar-indicator > * {
     }
 }
 
-/* ==== Tooltip Styling ==== */
+/*=========================================================================================*/
+
+/* Tooltip Styling */
 .tooltip {
   background-color: var(--background-secondary-alt);
   color: var(--text-normal);
@@ -736,7 +1106,9 @@ body > .progress-bar-container .progress-bar-indicator > * {
   border-right-color: var(--text-title-h5);
 }
 
-/* ==== Title Styling ==== */
+/*=========================================================================================*/
+
+/* Title Styling */
 
 /* Inline title (note title in editor) */
 .inline-title {
@@ -786,7 +1158,9 @@ body:not(.is-phone):not(.inline-title-divider-remove) .inline-title:not(.mk-inli
   margin-bottom: var(--size-4-3);
 }
 
-/* ==== Numbered Lists ==== */
+/*=========================================================================================*/
+
+/* Numbered Lists */
 body {
     --accent: rgb(8, 145, 178);
 }
@@ -816,7 +1190,9 @@ ol li:not(.task-list-item)::before {
     text-shadow: 0 0 0.3em var(--accent);
 }
 
-/* ==== Lists ==== */
+/*=========================================================================================*/
+
+/* Lists */
 body {
     --list-indent: 2em;
     --list-spacing: 0.075em;
@@ -850,7 +1226,9 @@ body:not(.ul-marker-restore) .markdown-source-view.mod-cm6 .HyperMD-list-line.Hy
     --list-bullet-transform: rotate(45deg);
 }
 
-/* ==== img hover zoom out img ==== */
+/*=========================================================================================*/
+
+/* img hover zoom out img*/
 img:hover {
   transform: scale(1.04);
   transition: transform 0.25s ease-in-out 0s;
@@ -859,7 +1237,9 @@ img:hover {
   transform: none;
 }
 
-/* ==== Live Preview Line Numbers ==== */
+/*=========================================================================================*/
+
+/* Live Preview Line Numbers */
 
 .theme-dark .markdown-source-view.mod-cm6 .cm-gutters {
   color: #00ffff !important; 
@@ -871,7 +1251,9 @@ img:hover {
   background: var(--background-primary);
 }
 
-/* ==== Graph View Styling for Both Themes ==== */
+/*=========================================================================================*/
+
+/* Graph View Styling for Both Themes */
 
 /* Graph view background */
 .theme-dark .workspace-leaf-content[data-type=graph] .view-content {
@@ -981,7 +1363,9 @@ img:hover {
   text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
 }
 
-/* ==== Empty State ==== */
+/*=========================================================================================*/
+
+/* Empty State */
 body {
     --empty-state-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' fill='none' viewBox='0 0 20 20'%3e%3cpath fill='black' d='M13.32 7.155a4.375 4.375 0 0 1-5.7 6.517l5.7-6.517ZM10 5.625a4.375 4.375 0 0 0-3.32 7.22l5.704-6.514A4.35 4.35 0 0 0 10 5.625ZM18.125 10A8.125 8.125 0 1 1 10 1.875 8.135 8.135 0 0 1 18.125 10Zm-2.5 0a5.6 5.6 0 0 0-1.476-3.793l.382-.483a.626.626 0 1 0-.937-.823l-.384.483a5.625 5.625 0 0 0-7.36 8.409l-.381.483a.625.625 0 0 0 .937.823l.384-.483A5.621 5.621 0 0 0 15.625 10Z'/%3e%3c/svg%3e");
 }
@@ -1027,7 +1411,9 @@ body {
     }
 }
 
-/* ==== Editor Styling ==== */
+/*=========================================================================================*/
+
+/* Editor Styling */
 
 /* Inline title styling */
 body:not(.is-phone):not(.inline-title-divider-remove) .inline-title:not(.mk-inline-title) {
@@ -1242,7 +1628,7 @@ body:not(.heading-indicator-off) .markdown-preview-sizer > div > :is(h1, h2, h3,
   background-color: var(--text-title-h6); /* #cccc00 */
 }
 
-/* ==== Header dividers ==== */
+/* Header dividers */
 body:is(.h2-divider-on, .h3-divider-on, .h4-divider-on, .h5-divider-on, .h6-divider-on) :is(.markdown-rendered, .markdown-preview-sizer > div, .is-live-preview) :is(h2, h3, h4, h5, h6)::after {
   content: "";
   position: absolute;
@@ -1349,7 +1735,9 @@ body:is(.h2-divider-on, .h3-divider-on, .h4-divider-on, .h5-divider-on, .h6-divi
   .theme-light body.h6-divider-on h6::after { background-image: linear-gradient(to left, var(--text-title-h6) 30%, transparent 70%); }
 }
 
-/* ==== Horizontal Rule ==== */
+/*=========================================================================================*/
+
+/* Horizontal Rule */
 
 /* Define fleuron SVG globally for both themes */
 body {
@@ -1387,7 +1775,9 @@ body {
   -webkit-mask-repeat: no-repeat;
 }
 
-/* ==== Links ==== */
+/*=========================================================================================*/
+
+/* Links */
 body {
   --link-decoration: none;
   --link-external-decoration: underline;
@@ -1457,7 +1847,9 @@ body {
   opacity: 0.7;
 }
 
-/* ==== Text Emphasis ==== */
+/*=========================================================================================*/
+
+/* Text Emphasis */
 
 /* Italic emphasis (<em>, .cm-em) */
 .cm-s-obsidian .cm-em,
@@ -1531,7 +1923,9 @@ body {
   border-radius: 2px;
 }
 
-/* ==== Embedded Images ==== */
+/*=========================================================================================*/
+
+/* Embedded Images */
 img {
     display: block;
     margin: 0 auto;
@@ -1547,7 +1941,10 @@ img:hover {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* Enhanced shadow on hover */
 }
 
-/* ==== Accessibility Focus Styles ==== */
+
+/*=========================================================================================*/
+
+/* Accessibility Focus Styles */
 a:focus, button:focus, input:focus, textarea:focus {
   outline: 2px solid var(--interactive-accent);
 }
@@ -1598,7 +1995,7 @@ a:focus, button:focus, input:focus, textarea:focus {
   body.h6-divider-on h6::after { background-image: linear-gradient(to left, var(--h6-color) 30%, transparent 70%); }
 }
 
-/* ==== Code blocks ==== */
+/* Code blocks */
 
 /* Inline code */
 .cm-s-obsidian .cm-inline-code,
@@ -1724,12 +2121,4 @@ code[class*="language-"],
 
 .token.italic {
   font-style: italic;
-}
-
-body {
-    /* Callouts */
-    --callout-border-width: 1px;
-    --callout-border-opacity: 1;
-    --callout-padding: 16px 24px 0 24px;
-
 }
